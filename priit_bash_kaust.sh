@@ -12,7 +12,6 @@ if [ $UID -ne 0 ]
     then 
     echo "Käivita skript juurkasutajana!"
     exit 1
-
 fi
 
 # Kontrollime parameetreid.
