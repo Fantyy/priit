@@ -25,7 +25,7 @@ if [ $# -ne 1 ];
 
 then
 
-	echo "käivite skript järgmiselt: ./loo-kodu www.minuveebisait.ee"
+	echo "käivita skript järgmiselt: ./priit_bash_apache2 www.minuveebisait.ee"
 
 	exit 1
 
