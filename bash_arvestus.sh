@@ -13,3 +13,5 @@ find / -type f -user $1 -exec ls -l {} \; > /tmp/output.txt
 chmod 777 /tmp/output.txt
 sort -k 5 < /tmp/output.txt > output2.txt
 rm /tmp/output.txt
+
+exit 0
