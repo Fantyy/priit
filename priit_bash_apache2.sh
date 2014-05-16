@@ -43,6 +43,11 @@ echo "127.0.0.1 $ADDRESS" >> /etc/hosts
 
 mkdir -p /var/www/$ADDRESS
 
+# Kirjutame loodud veebilehe sites-available sisse.
+cp /etc/apache2/sites-available/default /etc/apache2/sites-available/$ADDRESS
+sed -i 's/ServerAdmin webmaster@localhost/ServerAdmin webmaster@'$ADDRESS'\n\tServerName '$ADDRESS'/' /etc/apache2/sites-available/$ADDRESS
+sed -i 's@DocumentRoot /var/www@DocumentRoot /var/www/'$ADDRESS'@' /etc/apache2/sites-available/$ADDRESS
+
 # Kopeerime default index.html kasutaja loodud kausta.
 
 cp /var/www/index.html /var/www/$ADDRESS/
